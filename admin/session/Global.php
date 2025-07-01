@@ -9,8 +9,8 @@
  class Controller{
 
 	public function SQLConnection(){
-		$connection = array("server" => "localhost", "user" => "root", "password" => "", "database" => "payroll");
-		//$connection = array("server" => "db.be-mons1.bengt.wasmernet.com", "user" => "13be0a517014800018eaef075af7", "password" => "068613be-0a51-7145-8000-f7d6a159548c", "database" => "payroll");
+		//$connection = array("server" => "localhost", "user" => "root", "password" => "", "database" => "payroll");
+		$connection = array("server" => "mysqltestdb-mystix.c.aivencloud.com:12990" , "user" => "avnadmin", "password" => "AVNS_Oy08z4qFEeqForR2ds_", "database" => "defaultdb");
 		$connections = mysqli_connect($connection["server"], $connection["user"], $connection["password"], $connection["database"]);
 		return $connections;	
 	}
@@ -24,7 +24,7 @@
 	}
 
 	public function Database(){
-		$database = mysqli_select_db($this->SQLConnection(), 'payroll');
+		$database = mysqli_select_db($this->SQLConnection(), 'defaultdb);
 		return $database;
 	}
 }
