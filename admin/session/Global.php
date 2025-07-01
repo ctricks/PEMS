@@ -24,7 +24,7 @@
 	}
 
 	public function Database(){
-		$database = mysqli_select_db($this->SQLConnection(), 'defaultdb);
+		$database = mysqli_select_db($this->SQLConnection(), 'defaultdb');
 		return $database;
 	}
 }
