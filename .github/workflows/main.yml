@@ -1,0 +1,24 @@
+name: Build project and deploy to SmarterASP.NET
+on: [push]
+
+jobs:
+  build_and_deploy:
+    name: Build package and deploy to SmarterASP.NET
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Deploy to SmarterASP.NET
+        uses: jahbenjah/SmarterASP.NET-web-deploy@1.0.0
+        with:
+         server: win8203.site4now.net
+          username: tixbok2
+          password: superadmin2024
+          protocol: ftp
+          port: 21
+          timeout: 120000
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            README.md
