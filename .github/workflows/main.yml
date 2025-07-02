@@ -12,13 +12,13 @@ jobs:
         uses: jahbenjah/SmarterASP.NET-web-deploy@1.0.0
         with:
          server: win8203.site4now.net
-          username: tixbok2
-          password: superadmin2024
-          protocol: ftp
-          port: 21
-          timeout: 120000
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
-            README.md
+         username: tixbok2
+         password: superadmin2024
+         protocol: ftp
+         port: 21
+         timeout: 120000
+         exclude: |
+           **/.git*
+           **/.git*/**
+           **/node_modules/**
+           README.md
